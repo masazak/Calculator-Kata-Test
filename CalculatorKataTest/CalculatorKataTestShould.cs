@@ -5,10 +5,10 @@ namespace CalculatorKataTest
 {
     public class CalculatorKataTestShould
     {
-        
-        
 
         
+
+
 
     }
 }
