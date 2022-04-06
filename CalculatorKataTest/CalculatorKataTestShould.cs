@@ -20,6 +20,18 @@ namespace CalculatorKataTest
 
         }
 
+        [Fact]
+        public void SumOfUnknownAmountOfNumbers()
+        {
+            var obj = new Program();
+
+            int result = obj.add("1,2,3,4,5,6,7,8");
+
+            int expectedResult = 36;
+
+            Assert.Equal(expectedResult, result);
+
+        }
 
 
     }
