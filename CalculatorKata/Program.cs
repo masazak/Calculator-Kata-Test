@@ -13,11 +13,10 @@ namespace CalculatorKata
                 return 0;
             string[] num = numbers.Split(',');
             int sum = 0;
-            if (num.Length == 2)
-                sum = Convert.ToInt32(num[0]) + Convert.ToInt32(num[1]);
-            else
-                if (num.Length == 1)
-                sum = Convert.ToInt32(num[0]);
+            for (int i = 0; i < num.Length; i++)
+            {
+                sum += Convert.ToInt32(num[i]);
+            }
 
 
             return sum;
