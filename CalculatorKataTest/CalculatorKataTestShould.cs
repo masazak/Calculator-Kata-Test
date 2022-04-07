@@ -46,7 +46,18 @@ namespace CalculatorKataTest
 
         }
 
+        [Fact]
+        public void SumNumbersWithDifferentDelimiters()
+        {
+            var obj = new Program();
 
+            int result = obj.add("//;\n1;2");
+
+            int expectedResult = 3;
+
+            Assert.Equal(expectedResult, result);
+
+        }
 
 
 
