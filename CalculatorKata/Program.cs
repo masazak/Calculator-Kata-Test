@@ -24,7 +24,10 @@ namespace CalculatorKata
                     negativenum.Add(Convert.ToInt32(num[i]));
                     
                 }
-                sum += Convert.ToInt32(num[i]);
+                if (Convert.ToInt32(num[i]) < 1000)
+                { 
+                    sum += Convert.ToInt32(num[i]); 
+                }
             }
 
            if(negativenum.Any())
