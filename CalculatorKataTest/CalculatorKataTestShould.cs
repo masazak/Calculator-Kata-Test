@@ -33,9 +33,20 @@ namespace CalculatorKataTest
 
         }
 
-        
+        [Fact]
+        public void SumNumbersWithNewLines()
+        {
+            var obj = new Program();
 
-       
+            int result = obj.add("1\n2,3");
+
+            int expectedResult = 6;
+
+            Assert.Equal(expectedResult, result);
+
+        }
+
+
 
 
 
