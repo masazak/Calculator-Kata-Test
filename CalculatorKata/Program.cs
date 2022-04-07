@@ -12,8 +12,8 @@ namespace CalculatorKata
         {
             if (string.IsNullOrWhiteSpace(numbers))
                 return 0;
-            char[] delimiterChars = { '\n', ',' };
-            string[] num = numbers.Split(delimiterChars);
+            char[] delimiterChars = { '\n', ',', ';', '/' };
+            string[] num = numbers.Split(delimiterChars, System.StringSplitOptions.RemoveEmptyEntries);
             int sum = 0;
             for (int i = 0; i < num.Length; i++)
             {
