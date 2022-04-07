@@ -71,7 +71,20 @@ namespace CalculatorKataTest
 
         }
 
-        
+        [Fact]
+        public void SumNumbersAndIgnoreBigNumber()
+        {
+            var obj = new Program();
+
+            int result = obj.add("2,1001");
+
+            int expectedResult = 2;
+
+            Assert.Equal(expectedResult, result);
+
+
+
+        }
 
 
 
