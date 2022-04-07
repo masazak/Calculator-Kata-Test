@@ -65,11 +65,24 @@ namespace CalculatorKataTest
         {
             var obj = new Program();
 
-            //obj.add("1,4,-1");
-
             ArgumentException ex = Assert.Throws<ArgumentException>(() => obj.add("1,-4,-1"));
 
             Assert.Equal("negatives not allowed:-4, -1", ex.Message);
+
+        }
+
+        [Fact]
+        public void SumNumbersAndIgnoreBigNumber()
+        {
+            var obj = new Program();
+
+            int result = obj.add("2,1001");
+
+            int expectedResult = 2;
+
+            Assert.Equal(expectedResult, result);
+
+
 
         }
 
