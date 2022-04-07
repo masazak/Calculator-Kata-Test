@@ -6,12 +6,14 @@ namespace CalculatorKata
     {
         static void Main(string[] args)
         {
+           
         }
         public int add(String numbers)
         {
             if (string.IsNullOrWhiteSpace(numbers))
                 return 0;
-            string[] num = numbers.Split(',');
+            char[] delimiterChars = { '\n', ',' };
+            string[] num = numbers.Split(delimiterChars);
             int sum = 0;
             for (int i = 0; i < num.Length; i++)
             {
@@ -21,5 +23,8 @@ namespace CalculatorKata
 
             return sum;
         }
-    }
+        
+        
+
+        }
 }
