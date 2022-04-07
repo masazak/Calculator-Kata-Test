@@ -1,5 +1,6 @@
 using Xunit;
 using CalculatorKata;
+using System;
 
 namespace CalculatorKataTest
 {
@@ -58,6 +59,21 @@ namespace CalculatorKataTest
             Assert.Equal(expectedResult, result);
 
         }
+
+        [Fact]
+        public void SumNumbersWithNegativeNumbers()
+        {
+            var obj = new Program();
+
+            //obj.add("1,4,-1");
+
+            ArgumentException ex = Assert.Throws<ArgumentException>(() => obj.add("1,-4,-1"));
+
+            Assert.Equal("negatives not allowed:-4, -1", ex.Message);
+
+        }
+
+
 
 
 
